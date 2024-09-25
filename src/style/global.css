@@ -1,0 +1,50 @@
+/* Reset de Margens e Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos Globais */
+  html, body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333;
+    background-color: #f4f4f4; 
+    height: 100%; 
+    margin: 0;
+  }
+  
+  /* Links */
+  a {
+    color: #f0a500; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave para hover */
+  }
+  
+  a:hover {
+    color: #d88f00; /* Cor dos links quando passa o mouse */
+  }
+  
+  /* Estilos para botões */
+  button {
+    cursor: pointer; /* Muda o cursor para pointer */
+  }
+  
+  /* Estilos de cabeçalho e rodapé */
+  header {
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: rgb(39, 39, 39); /* Cor do texto do cabeçalho */
+    padding: 1rem; /* Espaçamento interno */
+  }
+  
+  footer {
+    
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Faz com que o footer fique no final do contêiner */
+    width: 100%;
+  }
+  
