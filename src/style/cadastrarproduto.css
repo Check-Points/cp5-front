@@ -1,0 +1,90 @@
+/* Definindo o estilo básico para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container do formulário de cadastro */
+  .cadastrar-produto-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cadastrar-produto-container h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  
+  /* Estilo do formulário */
+  .cadastrar-produto-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo de cada campo de input */
+  .cadastrar-produto-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .cadastrar-produto-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .cadastrar-produto-container input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Estilo do botão de cadastro */
+  .cadastrar-produto-container button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cadastrar-produto-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .cadastrar-produto-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .cadastrar-produto-container h1 {
+      font-size: 24px;
+    }
+  
+    .cadastrar-produto-container input {
+      font-size: 14px;
+    }
+  
+    .cadastrar-produto-container button {
+      font-size: 14px;
+    }
+  }
+  
