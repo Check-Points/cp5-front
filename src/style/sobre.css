@@ -1,36 +1,103 @@
+/* Definindo estilo geral para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner da página "Sobre Nós" */
 .about-container {
-    padding: 2rem;
-    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Título principal da página */
 .about-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.mission-section,
-.vision-section,
-.values-section,
-.team-section {
-    margin: 2rem 0;
+/* Estilo para as seções */
+section {
+    margin-bottom: 40px;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+/* Títulos das seções */
+section h2 {
+    font-size: 24px;
+    color: #ee9b00;
+    margin-bottom: 15px;
+    border-left: 5px solid #000000ab;
+    padding-left: 10px;
+    text-transform: uppercase;
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.5;
+/* Parágrafos */
+section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
+/* Lista de valores */
 .values-section ul {
     list-style-type: none;
     padding: 0;
 }
 
-.values-section li {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+.values-section ul li {
+    font-size: 16px;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Adicionando um ícone antes dos itens da lista */
+.values-section ul li::before {
+    content: '✔';
+    color: #ee8803;
+    position: absolute;
+    left: 0;
+}
+
+/* Estilo para a seção da equipe */
+.team-section p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .about-container h1 {
+        font-size: 28px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .values-section ul li {
+        font-size: 14px;
+    }
 }
