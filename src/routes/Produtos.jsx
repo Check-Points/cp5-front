@@ -1,15 +1,18 @@
-import '../style/global.css'
-import '../style/produtos.css'
+// Produtos.jsx
+import { useEffect, useState } from 'react';
+import '../style/global.css';
+import '../style/produtos.css';
 
-//importando imgs
-import imgbike1 from '../assets/image/bike1.png'
-import imgbike2 from '../assets/image/bike2.png'
-import imgbike3 from '../assets/image/bike3.png'
-import imgSport from '../assets/image/bike-sport.png'
-import imgMont from '../assets/image/bike-montain.png'
-import imgUrban from '../assets/image/bike-urban1.png'
+// Importando imgs
+import imgbike1 from '../assets/image/bike1.png';
+import imgbike2 from '../assets/image/bike2.png';
+import imgbike3 from '../assets/image/bike3.png';
+import imgSport from '../assets/image/bike-sport.png';
+import imgMont from '../assets/image/bike-montain.png';
+import imgUrban from '../assets/image/bike-urban1.png';
 
-const productsData = [
+// Produtos fixos
+const initialProductsData = [
     {
         id: 1,
         name: 'Bicicleta Elétrica X1',
@@ -54,24 +57,33 @@ const productsData = [
     },
 ];
 
+const Produtos = () => {
+  const [products, setProducts] = useState(initialProductsData);
 
-const Produtos=()=> {
-    return (
-        <div className="products-container">
-            <h1>Nossos Produtos</h1>
-            <div className="products-grid">
-                {productsData.map(product => (
-                    <div className="product-card" key={product.id}>
-                        <img src={product.imageUrl} alt={product.name} className="product-image" />
-                        <h2>{product.name}</h2>
-                        <p>{product.description}</p>
-                        <p className="product-price">{product.price}</p>
-                        <button className="buy-button">Comprar</button>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-}
+  useEffect(() => {
+    // Recupera os produtos salvos no sessionStorage
+    const storedProducts = JSON.parse(sessionStorage.getItem('products')) || [];
+    
+    // Combina os produtos fixos com os produtos cadastrados pelo usuário
+    setProducts([...initialProductsData, ...storedProducts]);
+  }, []);
 
-export default Produtos
+  return (
+    <div className="products-container">
+      <h1>Nossos Produtos</h1>
+      <div className="products-grid">
+        {products.map((product) => (
+          <div className="product-card" key={product.id}>
+            <img src={product.imageUrl} alt={product.name} className="product-image" />
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
+            <p className="product-price">{product.price}</p>
+            <button className="buy-button">Comprar</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Produtos;
