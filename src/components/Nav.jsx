@@ -15,7 +15,7 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <h2>Minha Loja</h2>
+        <h2>E-Bikes Store</h2>
       </div>
 
       <ul className={isMobileMenuOpen ? 'nav-links-mobile' : 'nav-links'}>
