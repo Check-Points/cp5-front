@@ -85,8 +85,8 @@ Após a instalação, o projeto pode ser utilizado e modificado conforme necess�
 
 
 **Desenvolvido por:**
-**[Milena]([https://github.com/MilenaCodinhoto])**
-**[Evellyn]([https://github.com/evojeda])**
+**[Milena]([https://github.com/MilenaCodinhoto])**,
+**[Evellyn]([https://github.com/evojeda])**,
 **[Carolina]([https://github.com/Linasferraz])**
 
 
